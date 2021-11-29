@@ -5,7 +5,7 @@ services:
     build: .
     restart: always
     ports:
-      - 8089:80
+      - 8080:80
     working_dir: /app
     environment:
       WEB_DOCUMENT_ROOT: /app
