@@ -2,6 +2,6 @@ application/config/database.php
 .htaccess
 env.php
 *.dblog
-# userfile/account/profile/*
-# userfile/account/realinfo/*
-# database_log/*
+userfile/account/profile/*
+userfile/account/realinfo/*
+database_log/*

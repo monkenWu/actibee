@@ -14,12 +14,17 @@ Actibee - 活動蜂，將校園社團作為主要服務對象，提供表單製�
 
 1. 於專案根目錄中執行以下指令
 ```
-docker-compose up
+docker-compose up -d
 ```
 
-2. 將專案根目錄中的 ``actibee.sql`` 匯入至資料庫
+2. 使用 Composer 將所需程式庫下載至專案中
+```
+docker-compose exec app composer install
+```
 
-3. 專案預設連接埠為 `8080` 
+3. 將專案根目錄中的 ``actibee.sql`` 匯入至資料庫
+
+4. 專案預設連接埠為 `8080` 
     * `localhost:8080`
 
-4. 將專案根目錄的 `.env.php` 複製一份為 `env.php` 並填入相關資訊以啟用系統中的寄信、付款功能
+5. 將專案根目錄的 `.env.php` 複製一份為 `env.php` 並填入相關資訊以啟用系統中的寄信、付款功能
