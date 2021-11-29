@@ -160,7 +160,8 @@
                     //清空重做
                     $("#multi_ul").html("");
                     edit.activityInfo.fee["data"].forEach(function(multiInfo){
-                        var newMultiOption = $(formFeeQuestion.fee_ans_div["multiOption"]);
+                        var newMultiOption = $(formFeeQuestion.fee_ans_div["multiOption"]());
+                        console.log(newMultiOption);
                         $(newMultiOption).find(".fee_title").val(multiInfo.title);
                         $(newMultiOption).find(".fee_price").val(multiInfo.price);
                         $(newMultiOption).find(".fee_content").val(multiInfo.content);

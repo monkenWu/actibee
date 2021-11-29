@@ -146,30 +146,30 @@ const formFeeQuestion = {
                 let template = document.getElementById('formFeeQuestion-fee_ans_div-multiOption').innerHTML;
                 return template;
             },
-            /********************
-                收費類型切換
-                *********************/
-            feeTypeChange: function(el) {
-                var fee_type_val = $(el).val();
-                switch (fee_type_val) {
-                    case feeTypeText.free:
-                        $("#fee_ans_div").html(this.fee_ans_div.free);
-                        break;
-                    case feeTypeText.fix:
-                        $("#fee_ans_div").html(this.fee_ans_div.fix);
-                        break;
-                    case feeTypeText.multi:
-                        var feeMultiUl = $(this.fee_ans_div.multi);
-                        //將選項組合進去
-                        $("#fee_ans_div").html(feeMultiUl);
-                        $("#multi_ul").append(this.fee_ans_div.multiOption);
+        },
+        /********************
+         收費類型切換
+        *********************/
+        feeTypeChange: function(el) {
+            var fee_type_val = $(el).val();
+            switch (fee_type_val) {
+                case feeTypeText.free:
+                    $("#fee_ans_div").html(this.fee_ans_div.free());
+                    break;
+                case feeTypeText.fix:
+                    $("#fee_ans_div").html(this.fee_ans_div.fix());
+                    break;
+                case feeTypeText.multi:
+                    var feeMultiUl = this.fee_ans_div.multi();
+                    //將選項組合進去
+                    $("#fee_ans_div").html(feeMultiUl);
+                    $("#multi_ul").append(this.fee_ans_div.multiOption);
 
-                        //外部引入
-                        activityForm.editorSortable($("#multi_ul"));
+                    //外部引入
+                    activityForm.editorSortable($("#multi_ul"));
 
-                        break;
-                }
-            },
+                    break;
+            }
         },
         /********************
          多重收費新增與刪除
@@ -180,6 +180,5 @@ const formFeeQuestion = {
         delMulti: function(el) {
             $(el).parent().parent().parent().parent().remove();
         },
-
     }
 </script>
