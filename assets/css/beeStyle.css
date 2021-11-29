@@ -1,0 +1,203 @@
+:root {
+    /*
+        --main-green: #006934;
+        --main-yellow: #F8B62D;
+    */
+    --pane-padding: 5px 42px;
+    --main-green: #295F2D;
+    --second-green: #139A43;
+    --main-yellow: #FFE67c;
+    --second-yellow: #ffffcc;
+    --third-yellow: #FFCC66;
+    --main-black: black;
+    --second-black: #53505f;
+    --main-white: white;
+    --main-gray: #F2F8E9;
+    --second-gray: #E5E5E5;
+    --third-gray: rgb(184, 184, 184);
+    --main-purple:#9779bb;
+    --main-shodow: #b5b5b5;
+
+    --transition-second: 0.3s;
+}
+
+*{
+    font-family:"Microsoft JhengHei", Poppins, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family:"Microsoft JhengHei", Poppins, sans-serif;
+    margin: 0px;
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+/*右上角功能按鍵*/
+.dropdown-notification .dropdown-toggle,
+.dropdown-inbox .dropdown-toggle,
+.dropdown-user .dropdown-toggle {
+    color: var(--main-white);
+    background-color: var(--main-green);
+}
+
+/*footer*/
+.admin-footer {
+    background-color: var(--main-green);
+}
+
+/* 按鈕 */
+.btn-bee-one {
+    background-color: var(--main-yellow);
+    color: var(--second-black);
+    border-radius: 20px;
+}
+
+.btn-bee-one:hover {
+    background-color: var(--third-yellow);
+
+    transition-duration: 0.5s;
+}
+
+.btn-bee-two {
+    background-color: var(--second-yellow);
+    color: var(--main-black);
+    border-radius: 20px;
+    box-shadow: var(--main-shodow) 2px 2px 3px;
+}
+
+.btn-bee-two:hover {
+    background-color: var(--third-yellow);
+    color: var(--main-white);
+}
+
+.btn-bee-three {
+    background-color: var(--second-gray);
+    border-radius: 20px;
+}
+
+.btn-bee-three:hover {
+    background-color: var(--main-gray);
+    transition-duration: 0.5s;
+}
+
+.btn-bee-four {
+    color: var(--main-white);
+    background-color: var(--main-green);
+    border-radius: 20px;
+}
+
+.btn-bee-four:hover {
+    color: white;
+    background-color: var(--second-green);
+    transition-duration: 0.5s;
+}
+
+
+/*背景 */
+.container_full:before {
+    background-color: var(--main-yellow);
+    height: 20rem;
+}
+
+.swal-button {
+    background-color: var(--main-yellow);
+}
+
+.swal-button:not([disabled]):hover {
+    background-color: var(--third-yellow);
+}
+
+/*
+.form-control:focus{
+    border-color:var(--third-yellow);
+}
+*/
+
+/* checkBoxstyle */
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    vertical-align: middle;
+    margin-top: 0;
+    background: #fff;
+    border: var(--third-yellow) solid 1px;
+    border-radius: 3px;
+    min-height: 14px;
+    min-width: 14px;
+}
+
+input[type="checkbox"]:checked {
+    background: var(--third-yellow);
+    transition-duration: 0.2s;
+
+}
+
+/* 用長方形模擬勾勾 */
+input[type=checkbox]:checked::after {
+    content: '';
+    top: 1px;
+    left: 1px;
+    position: absolute;
+    background: transparent;
+    border: #fff solid 2px;
+    border-top: none;
+    border-right: none;
+    height: 6px;
+    width: 10px;
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    transition-duration: 0.2s;
+
+}
+
+
+/* radioInput */
+input[type="radio"] {
+    -webkit-appearance: none;
+    vertical-align: middle;
+    margin-top: 0;
+    background: #fff;
+    border: var(--third-yellow) solid 1px;
+    border-radius: 50%;
+    min-height: 14px;
+    min-width: 14px;
+}
+
+input[type="radio"]:checked {
+    background: var(--third-yellow);
+    transition-duration: 0.2s;
+}
+
+/* 改圓形 */
+input[type=radio]:checked::after {
+    content: '';
+    top: 1px;
+    left: 1px;
+    position: absolute;
+    background: transparent;
+    border: #fff solid 2px;
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    transition-duration: 0.2s;
+
+}
+
+
+/*頁面最小高度*/
+
+.container_full{
+    min-height: 100vh;
+}
+
+@media (max-width: 600px) {
+    
+}

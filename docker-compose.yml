@@ -1,0 +1,28 @@
+version: "3"
+
+services:
+  app:
+    build: .
+    restart: always
+    ports:
+      - 8089:80
+    working_dir: /app
+    environment:
+      WEB_DOCUMENT_ROOT: /app
+    volumes:
+      - './:/app'
+      # 寄件設定
+      # - './sasl_passwd:/etc/postfix/sasl_passwd'
+      # - './sasl_passwd.db:/etc/postfix/sasl_passwd.db'
+      # - './main.cf:/etc/postfix/main.cf'
+  db:
+    image: mysql:5.6
+    volumes:
+      - mysql_db_data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: actibee
+      MYSQL_DATABASE: actibee
+    ports:
+      - "3306:3306"
+volumes:
+  mysql_db_data:
